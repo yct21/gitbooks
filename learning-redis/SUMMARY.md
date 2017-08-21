@@ -1,4 +1,4 @@
 # Summary
 
 * [Basic Concepts](basic-concepts/index.md)
-  * [Redis 中的命令](basic-concepts/commands.md)
+  * [Redis 中的类型及命令](basic-concepts/types-and-commands.md)
