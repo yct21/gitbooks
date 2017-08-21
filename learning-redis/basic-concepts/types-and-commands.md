@@ -115,5 +115,5 @@ In many other key-value databases, data is stored as a plain string with no oppo
 - `ZRANGEBYSCORE key-name min max [withscores] [limit offset count]`：根据 score 返回 min 到 max 之间的所有 member
 - `ZREMRANGEBYRANK key-name start stop`：根据排名删除 start 到 stop 之间的所有 member
 - `ZREMRANGEBYSCORE key-name min max`：根据 score 删除 min 到 max 之间的所有 member
-- `ZINTERSTORE dest-key key-count key [key ...] [weight ...] [sum|min|max]：查询交集
-- `ZUNIONSTORE dest-key key-count key [key ...] [weight ...] [sum|min|max]：查询并集
+- `ZINTERSTORE dest-key key-count key` [key ...] [weight ...] [sum|min|max]：查询交集
+- `ZUNIONSTORE dest-key key-count key` [key ...] [weight ...] [sum|min|max]：查询并集
