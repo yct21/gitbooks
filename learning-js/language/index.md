@@ -69,6 +69,34 @@ function example() {
 }
 ```
 
+JavaScript 中的函数采用按值传递(pass by value)，当传递的值为一个对象的引用时，这
+里值即为对象的引用，或者说，按共享传递对象(pass by sharing)。和按引用传递(pass
+by reference)的区别在于，对形参直接进行赋值，不会影响实参的值：
+
+```js
+function changeStuff(a, b, c)
+{
+  a = a * 10;
+  b.item = "changed";
+  c = {item: "changed"};
+}
+
+var num = 10;
+var obj1 = {item: "unchanged"};
+var obj2 = {item: "unchanged"};
+
+changeStuff(num, obj1, obj2);
+
+console.log(num);
+console.log(obj1.item);
+console.log(obj2.item);
+
+// 输出结果
+10
+changed
+unchanged
+```
+
 ## `object`
 
 JavaScript 中，几乎所有的 object 都有 properties，例外是 `null` 和 `undefined`。
@@ -139,3 +167,4 @@ RTextCell.prototype.draw = function(width, height) {
 ## Reference
 
 - [Eloquent JavaScript](http://eloquentjavascript.net/)
+- [ES6 变量声明与赋值：值传递、浅拷贝与深拷贝详解 - 知乎专栏](https://zhuanlan.zhihu.com/p/28508795?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io)
