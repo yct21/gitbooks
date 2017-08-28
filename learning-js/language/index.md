@@ -135,3 +135,7 @@ RTextCell.prototype.draw = function(width, height) {
 ```
 
 在函数被调用时，会绑定相应的 `this`。
+
+## Reference
+
+- [Eloquent JavaScript](http://eloquentjavascript.net/)
