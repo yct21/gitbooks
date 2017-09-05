@@ -42,6 +42,8 @@ console.log(false == 0)
 // → true
 ```
 
+![table](v2-a1c3352daf999b88dd3400fa41cb5c8f_b_2017-09-05_13-33-33.png)
+
 ## 函数
 
 当函数的执行过程中未执行 `return` 语句时，该函数返回 `undefined`。
