@@ -48,3 +48,18 @@ event 以一组序列的方式进行处理。和 stream 的不同点在于，Eve
 此外，出现在 JavaScript 中不久的 Generator，则是一个 push base 的处理异步的方法。
 
 RxJS 的 Observable 采用 push-based ntification。
+
+## bounded context
+
+当创建一个 observable 时，实际上创造了一个新的 ecosystem，或者说是 bounded context。
+
+这个 ecosystem 始于 observable 被订阅，终于 subscription 被废弃回收。
+
+> A bounded context is a design principle originating from domain-driven design,
+> which states that entities pertaining to a single domain model should be
+> highly cohesive and expose only the necessary interface to interact with other
+> contexts. You can extend this definition to the Observable type as a form of
+> context that hides the nature of the data that’s pushed through it, allowing
+> you to transform it by a ubiquitous language made up from the limited set of
+> operators being exposed and independently of what happens in the outside
+> world.
